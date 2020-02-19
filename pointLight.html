@@ -1,0 +1,34 @@
+<html>
+  <head>
+  <script src = 'p5.js'></script>
+  </head>
+  <body>
+    <input type = "integer" id = "radius">
+    <input type = "integer" id = "angle">
+    <input type = "integer" id = "speed">
+    
+    <script>
+    var angle;
+    var speed;
+    var radius;
+    
+    function setup() {
+  createCanvas(100, 100, WEBGL);
+  background(150);
+}
+function draw() {
+  background(0);
+  let locX = mouseX - width / 2;
+//for positioning, you would make a variable. It would be mouseX (where your mouse currently is (horizontally) )
+//divided by 2 in order to slow down speed
+  let locY = mouseY - height / 2;
+//for positioning, you would make a different variable. It would be mouseY (where your mouse currently is (vertically) )
+//divide by 2 in order to slow down speed
+  pointLight(250, 250, 250, locX, locY, 50);
+  noStroke();
+  sphere(40); //draws a sphere
+}
+
+    </script>
+  </body>
+</html>
